@@ -35,6 +35,12 @@ The project covers the complete Deep Learning workflow, starting from data prepr
 - Save trained models and preprocessing objects for future inference.
 - Build an interactive application for real-time customer churn prediction.
 
+## Live URL
+
+Check out :- https://churn-prediction-dl-ann.streamlit.app/
+
+<br>
+
 ## 📂 Dataset Description
 
 The project uses the **Churn Modelling Dataset**, which contains customer-related information from a banking institution.
