@@ -1,8 +1,4 @@
-# 🏦 Customer Churn Prediction Using Artificial Neural Networks (ANN)
-
-<p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=600&size=25&duration=3000&pause=1000&color=36BCF7&center=true&vCenter=true&width=800&lines=Customer+Churn+Prediction;Powered+by+Deep+Learning+%7C+TensorFlow;End-to-End+Machine+Learning+Project" alt="Typing SVG" />
-</p>
+<img src="https://capsule-render.vercel.app/api?type=waving&color=0:36BCF7,50:7F00FF,100:FF4B4B&height=250&section=header&text=Customer%20Churn%20Prediction&fontSize=55&fontAlignY=35&fontColor=ffffff&animation=fadeIn&desc=Powered%20by%20Deep%20Learning%20%7C%20TensorFlow%20%7C%20Keras&descAlignY=55&descSize=18" width="100%"/>
 
 <p align="center">
   <img src="https://img.shields.io/badge/Python-3.x-blue?style=for-the-badge&logo=python&logoColor=white" />
@@ -43,7 +39,7 @@ The project covers the complete Deep Learning workflow, starting from data prepr
 
 The project uses the **Churn Modelling Dataset**, which contains customer-related information from a banking institution.
 
-The dataset consists of the following features:
+### Features
 
 | Feature | Description |
 |---|---|
@@ -81,36 +77,59 @@ The columns `RowNumber`, `CustomerId`, and `Surname` are removed because they ar
 
 ## 🔄 Project Workflow
 
-```mermaid
-flowchart TD
-    A["Customer Churn Dataset"] --> B["Data Cleaning"]
-    B --> C["Feature Selection"]
-    C --> D["Categorical Encoding"]
-    D --> E["Train-Test Split"]
-    E --> F["Feature Scaling"]
-    F --> G["ANN Model Development"]
-    G --> H["Model Training"]
-    H --> I["Early Stopping & TensorBoard"]
-    I --> J["Model Evaluation"]
-    J --> K["Save Model & Encoders"]
-    K --> L["Streamlit Application"]
-    L --> M["Customer Churn Prediction"]
-```
+The complete pipeline follows these stages:
+
+<p align="center">
+  <img src="https://img.shields.io/badge/01-Data%20Collection-2563EB?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/02-Data%20Cleaning-2563EB?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/03-Feature%20Selection-2563EB?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/04-Categorical%20Encoding-2563EB?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/05-Train%20Test%20Split-2563EB?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/06-Feature%20Scaling-2563EB?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/07-ANN%20Development-FF8C00?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/08-Model%20Training-FF8C00?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/09-Model%20Evaluation-16A34A?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/10-Model%20Persistence-16A34A?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/11-Streamlit%20Deployment-FF4B4B?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/12-Customer%20Churn%20Prediction-16A34A?style=for-the-badge" />
+</p>
 
 ## 🧹 Data Preprocessing
 
-The following preprocessing operations are performed before training the neural network:
+The following preprocessing operations are performed before training the neural network.
 
-**1. Data Cleaning and Feature Selection**
+### 1. Data Cleaning and Feature Selection
 
 - Removed unnecessary columns such as `RowNumber`, `CustomerId`, and `Surname`.
 - Separated independent features and the target variable `Exited`.
 
-**2. Label Encoding**
+### 2. Label Encoding
 
 The `Gender` column is converted into numerical values using Scikit-learn's `LabelEncoder`.
 
-**3. One-Hot Encoding**
+### 3. One-Hot Encoding
 
 The `Geography` column is transformed using `OneHotEncoder` to represent categorical geographical information without introducing an artificial ordinal relationship.
 
@@ -120,7 +139,7 @@ The resulting features are:
 - Geography_Germany
 - Geography_Spain
 
-**4. Train-Test Split**
+### 4. Train-Test Split
 
 The dataset is divided into:
 
@@ -129,7 +148,7 @@ The dataset is divided into:
 
 The split uses `random_state=42` to ensure reproducibility.
 
-**5. Feature Scaling**
+### 5. Feature Scaling
 
 `StandardScaler` is used to standardize numerical features.
 
@@ -145,13 +164,21 @@ The model consists of two hidden layers and one output layer.
 
 ### Network Architecture
 
-```mermaid
-flowchart TD
-    A["Input Layer<br/>12 Features"] --> B["Hidden Layer 1<br/>64 Neurons | ReLU"]
-    B --> C["Hidden Layer 2<br/>32 Neurons | ReLU"]
-    C --> D["Output Layer<br/>1 Neuron | Sigmoid"]
-    D --> E["Churn Probability"]
-```
+<p align="center">
+  <img src="https://img.shields.io/badge/INPUT%20LAYER-12%20FEATURES-2563EB?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/HIDDEN%20LAYER%201-64%20NEURONS%20%7C%20RELU-9333EA?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/HIDDEN%20LAYER%202-32%20NEURONS%20%7C%20RELU-9333EA?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/OUTPUT%20LAYER-1%20NEURON%20%7C%20SIGMOID-16A34A?style=for-the-badge" />
+  <br>⬇️
+  <br>
+  <img src="https://img.shields.io/badge/PREDICTION-CHURN%20PROBABILITY-FF8C00?style=for-the-badge" />
+</p>
 
 ### Model Configuration
 
@@ -199,7 +226,7 @@ y_pred = (y_pred_prob >= 0.5).astype(int)
 
 The confusion matrix and classification report are generated using Scikit-learn.
 
-> Note: Evaluation metrics are intentionally not hardcoded here. They should be updated using the actual results obtained from model evaluation.
+> Note: Evaluation metrics are intentionally not hardcoded. They should be updated using the actual results obtained from model evaluation.
 
 ## 💾 Model Persistence
 
@@ -275,19 +302,19 @@ Deep Learning End to End Project/
 
 Follow these steps to run the project locally.
 
-**1. Clone the Repository**
+### 1. Clone the Repository
 
 ```bash
 git clone https://github.com/YOUR_USERNAME/YOUR_REPOSITORY.git
 ```
 
-**2. Navigate to the Project Directory**
+### 2. Navigate to the Project Directory
 
 ```bash
 cd "Deep Learning End to End Project"
 ```
 
-**3. Create a Virtual Environment**
+### 3. Create a Virtual Environment
 
 ```bash
 python -m venv venv
@@ -299,7 +326,7 @@ Activate it on Windows:
 venv\Scripts\activate
 ```
 
-**4. Install Dependencies**
+### 4. Install Dependencies
 
 ```bash
 pip install -r requirements.txt
@@ -311,13 +338,13 @@ Alternatively:
 pip install pandas numpy scikit-learn tensorflow streamlit matplotlib tensorboard h5py
 ```
 
-**5. Run the Streamlit Application**
+### 5. Run the Streamlit Application
 
 ```bash
 streamlit run app.py
 ```
 
-**6. Access the Application**
+### 6. Access the Application
 
 Open the following URL in your browser:
 
@@ -352,13 +379,6 @@ This allows visualization of training and validation metrics over the course of 
 - Experiment with different classification thresholds to improve churn detection recall.
 - Implement SHAP-based explainability to understand feature contributions.
 - Deploy the application using Streamlit Community Cloud or another hosting platform.
-
-## 👨‍💻 Author
-
-**Abhinav Singh**
-
-B.Tech | IIT Bhubaneshwar  
-Machine Learning & Deep Learning Enthusiast
 
 <p align="center">
   <a href="https://github.com/Abhinav-frfr">
